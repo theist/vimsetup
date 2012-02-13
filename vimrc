@@ -55,3 +55,5 @@ autocmd BufReadPost *
     \   exe "normal g`\"" |
     \ endif
 
+map <C-a> :CommandT<CR>
+
