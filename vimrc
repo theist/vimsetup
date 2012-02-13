@@ -55,5 +55,6 @@ autocmd BufReadPost *
     \   exe "normal g`\"" |
     \ endif
 
-map <C-a> :CommandT<CR>
+noremap <C-a> :CommandT<CR>
+nnoremap <C-l> :TagbarToggle<CR>
 
