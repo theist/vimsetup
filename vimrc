@@ -31,6 +31,7 @@ set nocompatible
 set ruler
 set hlsearch
 set paste
+set listchars=eol:$,tab:>-,trail:.,extends:>,precedes:<
 
 colorscheme torte
 syntax on
@@ -56,4 +57,8 @@ autocmd BufReadPost *
 
 noremap <C-a> :CommandT<CR>
 nnoremap <C-l> :TagbarToggle<CR>
+nnoremap <F2> :set wrap!<CR>
+nnoremap <F5> :set list!<CR>
+nnoremap <F4> :set number!<CR>
+nnoremap <F3> :set hlsearch!<CR>
 
