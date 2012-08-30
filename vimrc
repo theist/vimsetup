@@ -3,21 +3,6 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-colorscheme torte
-syntax on
-
-:highlight Normal guibg=Black guifg=White
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
-endif
-
-if has("autocmd")
-  filetype indent on
-endif
-
-filetype plugin indent on
-
 "search stuff
 set showcmd
 set showmatch
@@ -45,6 +30,20 @@ set laststatus=2
 set nocompatible
 set ruler
 set hlsearch
+set paste
+
+colorscheme torte
+syntax on
+filetype on
+filetype indent on
+filetype plugin on
+
+:highlight Normal guibg=Black guifg=White
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
+endif
+
 
 "whitespace highlight
 highlight RedundantWhitespace ctermbg=red guibg=red
